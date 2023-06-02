@@ -5,12 +5,13 @@ function NoIllegelAccess() {
   }
 }
 
-NoIllegelAccess();
+NoIllegelAccess(); //cheking if someone enter to shop without token ,just pulled him out
 
 const products = document.querySelector(".Products");
 var modfiedArrOfItems = [];
 const url = "https://fakestoreapi.com/products";
 let allCartBtns;
+
 async function getDataFromApi() {
   try {
     let response = await fetch(url);
@@ -42,8 +43,6 @@ function modifiedData(dataArr) {
     modfiedArrOfItems.push(item);
   });
 
-  console.log(modfiedArrOfItems);
-
   localStorage.setItem("modfiedArrOfItems", JSON.stringify(modfiedArrOfItems));
 
   document.querySelector(".circleloader").style.display = "none";
@@ -53,6 +52,7 @@ function modifiedData(dataArr) {
   ShowBrands(modfiedArrOfItems);
 }
 
+// generating the random color
 function generateColor() {
   let colors3 = [];
   let colors = ["red", "blue", "green", "grey", "black"];
@@ -67,6 +67,7 @@ function generateColor() {
   }
 }
 
+// generating the random size
 function generateSize() {
   let sizeArr = ["S", "M", "L", "XL"];
   let Size3 = [];
@@ -81,8 +82,8 @@ function generateSize() {
   }
 }
 
+// showing the products on UI
 function ShowBrands(brandsInfoArr) {
-  // console.log("working");
   products.innerHTML = "";
   document.querySelector(".Products").style.display = "grid";
   if (brandsInfoArr.length == 0) {
@@ -153,7 +154,9 @@ document.getElementById("search").addEventListener("keyup", () => {
   }
 });
 // // ...................................................................................
+// fitler task is done here
 function allSelcetedColors() {
+  //maping which color input element  ware checked
   let colors = [];
   let colorsEle = document.querySelectorAll(".colorAll");
   colorsEle.forEach((element) => {
@@ -165,6 +168,7 @@ function allSelcetedColors() {
 }
 
 function allSelcetedSizes() {
+  //maping which size input element  ware checked
   let allSizeEle = document.querySelectorAll(".sizesAll");
   let sizes = [];
   allSizeEle.forEach((element) => {
@@ -176,6 +180,7 @@ function allSelcetedSizes() {
 }
 
 function allSelcetedRange() {
+  //checking what price range  been selected by user
   let prices = [];
   let pricesEle = document.querySelectorAll(".filterprice");
   pricesEle.forEach((element) => {
@@ -186,10 +191,11 @@ function allSelcetedRange() {
   return prices;
 }
 let filteredMapedObject = {};
-
+// created a object to map all all the inputs array checked ones
 let applyBtn = document.getElementById("filter-apply-btn");
 
 applyBtn.addEventListener("click", (event) => {
+  //applying the filter,on basis conditions, selected as per need
   let selectedColors = allSelcetedColors();
   let selectedSizes = allSelcetedSizes();
   let selectedRanges = allSelcetedRange();
@@ -204,10 +210,12 @@ applyBtn.addEventListener("click", (event) => {
 });
 
 function filterProductsFromModifiedArr() {
+  //filtering applied here
   var filteredOn4filters = [];
   for (let i = 0; i < modfiedArrOfItems.length; i++) {
     let agree = 0;
     if (filteredMapedObject.myColors.length == 0) {
+      //taking all products which were not selected by user
       agree++;
     } else if (
       filteredMapedObject.myColors.includes(modfiedArrOfItems[i].color[0]) ||
@@ -287,7 +295,7 @@ function colorbtn() {
     allButtons[i].style.color = "white";
   }
 }
-
+//function filtering on clothes category basis
 function filterOncategoryBasis(category) {
   let categoryArr = [];
   for (let i = 0; i < modfiedArrOfItems.length; i++) {

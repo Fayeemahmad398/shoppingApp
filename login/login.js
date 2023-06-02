@@ -3,9 +3,10 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 let Users = [];
 
+
 loginBtn.addEventListener("click", function (event) {
   event.preventDefault();
-  //all proper fields are checking here
+  //all proper fields are checked here
   if (email.value.trim() == "" || password.value.trim() == "") {
     alert("Please Enter email and password properly");
     return;
@@ -13,7 +14,7 @@ loginBtn.addEventListener("click", function (event) {
 
   let all_Saved_Users =
     JSON.parse(localStorage.getItem("all_Saved_Users")) || [];
-  // No local data is there
+  // No local storage data is there
   if (all_Saved_Users.length == 0) {
     alert("sorry, You have to signup first.");
     window.location.href = "../signupFolder/signup.html";
@@ -56,6 +57,8 @@ function generateToken() {
   }
   return token;
 }
+
+
 
 document.getElementById("mycart").onclick = function () {
   alert("Please login first!");

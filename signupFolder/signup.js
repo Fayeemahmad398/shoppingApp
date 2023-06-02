@@ -52,17 +52,16 @@ function HandleSignup(event) {
     alert("Please all information properly");
   }
 }
+
 let cartbtn = document.getElementById("cartbtn");
 cartbtn.onclick = function () {
   alert("Please Sign up First!");
 };
 
-// window.onbeforeunload = () => {
-//   localStorage.setItem("all_Saved_Users", JSON.stringify(all_Saved_Users));
-// };
 document.getElementById("profilebtn").onclick = function () {
   alert("Please sign up first!");
 };
+
 document.querySelector(".hamberger").addEventListener("click", function () {
   document.querySelector(".NavbarUl").classList.toggle("boxicon");
 });

@@ -25,14 +25,6 @@ body {
   left: 0px;
   right: 0px;
 }
-.container {
-  /* border: 2px solid red; */
-}
-/* ------------------------------------ */
-/* .hamberger {
-  display: none !important;
-} */
-/* ------------------------ */
 
 ul {
   display: flex;
@@ -74,14 +66,13 @@ p {
 .main {
   display: flex;
   flex-direction: column;
-  /* border: 5px dotted yellowgreen; */
   padding: 30px;
   margin-top: 50px;
 }
+/* left portion is styled here */
 .left-content {
   display: flex;
   flex-direction: column;
-  /* border: 2px dotted green; */
   width: 50%;
 }
 .left-content p {
@@ -140,10 +131,10 @@ button {
 #login:hover {
   background: #ffffff;
 }
-
+/* ------------------------------- */
+/* right portion styled here */
 .right-content {
   margin-top: 15px;
-  /* border: 2px dotted red; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -199,7 +190,7 @@ button {
     opacity: 1;
   }
 }
-
+/* media querry for upto 730px */
 @media (max-width: 730px) {
   .right-content {
     flex-direction: column;
@@ -236,51 +227,4 @@ button {
     margin: auto;
     margin-top: 75px;
   }
-  /* ------------------------------------------------------------- */
-  /* .NavbarUl {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    top: 70px;
-    right: 0px;
-    position: absolute;
-    width: fit-content;
-    margin-right: 0px;
-    background-color: white;
-    border: 2px solid rgb(152, 149, 149);
-    display: none;
-  }
-  .boxicon {
-    display: flex !important;
-  }
-  .NavbarUl li {
-    margin-left: 0px !important ;
-  }
-  #navbar {
-    justify-content: space-between;
-    align-items: center;
-  }
-  .hamberger {
-    margin: 0px 40px;
-    font-size: 30px !important;
-    display: block !important;
-  }
-  .hamberger:hover {
-    cursor: pointer;
-  }
-  .NavbarUl li a {
-    color: black;
-  }
-
-  .NavbarUl li:hover {
-    background-color: #c7c1c1;
-  }
-  ul li:nth-child(1) {
-    background-color: rgb(248, 243, 243);
-    border: 1px solid white;
-  }
-
-  .NavbarUl li {
-    margin: 10px 0px;
-  } */
 }
