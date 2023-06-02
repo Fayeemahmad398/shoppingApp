@@ -9,7 +9,7 @@ NoIllegelAccess();
 
 const products = document.querySelector(".Products");
 var modfiedArrOfItems = [];
-const url = "https:fakestoreapi.com/products";
+const url = "https://fakestoreapi.com/products";
 let allCartBtns;
 async function getDataFromApi() {
   try {

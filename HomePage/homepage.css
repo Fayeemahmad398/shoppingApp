@@ -104,6 +104,8 @@ main {
   justify-content: center;
   align-items: center;
 }
+.expandmore {
+}
 #filter-apply-btn {
   display: block;
   height: 25px;
@@ -393,6 +395,10 @@ img {
   }
   #clickToSort {
     display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
   .leftSection {
     display: none;
@@ -403,7 +409,7 @@ img {
     top: 70px;
     height: 150vh;
   }
-  .card{
+  .card {
     width: 85%;
   }
   main {
