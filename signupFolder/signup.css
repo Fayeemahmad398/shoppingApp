@@ -1,0 +1,112 @@
+* {
+  /* margin: 0px; */
+  padding: 0px;
+}
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+/* navbar is styled here */
+#navbar {
+  height: 70px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin-right: 30px;
+}
+ul a {
+  text-decoration: none;
+  font-size: 20px;
+  margin: 5px 20px;
+  color: #ffffff;
+  padding: 3px 5px;
+}
+ul li a:hover {
+  text-decoration: underline;
+}
+ul li:nth-child(3) {
+  border: 1px solid #ffffff;
+  background-color: rgb(179, 178, 178);
+}
+
+p a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+p {
+  margin: 10px 20px;
+  padding: 5px 10px;
+}
+/* ------------------------------------------------------------------------- */
+/* form styled here */
+
+.container {
+  width: 95%;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+
+input,
+button {
+  display: block;
+  margin: 15px 0px;
+  height: 25px;
+  width: auto;
+}
+
+#signup {
+  width: 130px;
+  height: 30px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+#signup a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 4px 26px;
+}
+#signup a:hover {
+  color: #000000;
+}
+#signup:hover {
+  background: #ffffff;
+}
+h1 {
+  margin: 0px;
+}
+#cartbtn{
+  cursor: pointer;
+}
+#form {
+  width: 90%;
+  margin-top: 80px !important;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background: rgb(179, 178, 178);
+  margin: auto;
+}

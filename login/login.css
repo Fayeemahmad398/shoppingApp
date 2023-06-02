@@ -1,0 +1,112 @@
+* {
+  /* margin: 0px; */
+  padding: 0px;
+}
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+/* navbar is styled here */
+#navbar {
+  height: 70px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+.container {
+  /* border: 2px solid red; */
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin-right: 30px;
+}
+ul a {
+  text-decoration: none;
+  font-size: 20px;
+  margin: 5px 20px;
+  color: #ffffff;
+  padding: 3px 5px;
+}
+ul li:nth-child(2) {
+  background-color: rgb(179, 178, 178);
+  border: 1px solid white;
+}
+ul li a:hover {
+  text-decoration: underline;
+}
+
+p a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+p {
+  margin: 10px 20px;
+  padding: 5px 10px;
+}
+/* ------------------------------------------------------------------------- */
+/* form styled here */
+.container {
+  width: 95%;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+input,
+button {
+  display: block;
+  margin: 15px 0px;
+  height: 25px;
+  width: auto;
+}
+button {
+  width: 130px;
+  background-color: black;
+  color: #ffffff;
+  height: 30px;
+}
+#login {
+  font-size: 18px;
+  background-color: #000000;
+}
+#login a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 4px 26px;
+}
+#login a:hover {
+  color: #000000;
+}
+#login:hover {
+  background: #ffffff;
+}
+h1 {
+  margin: 0px;
+}
+#form {
+  width: 100%;
+  margin-top: 80px !important;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(179, 178, 178);
+}
+#mycart,
+#profilebtn {
+  cursor: pointer;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loginpage</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styleForAllFiles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navbar">
+        <div class="logo">
+          <p><a href="">MeShop</a></p>
+          <div id="clickToSort">
+            Sort by:
+            <span class="material-icons expandmore">
+              expand_more
+            </span>
+          </div>
+        </div>
+        <span class="material-icons hamberger">
+          menu
+        </span>
+        <ul class="NavbarUl">
+          <li><a href="">Home</a></li>
+          <li>
+            <a href="" id="loginpage">Login</a>
+          </li>
+          <li><a href="" id="signup">Signup</a></li>
+          <li><a href="../cart/cart.html">MyCart</a></li>
+          <li><a href="../profile/profile.html">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="leftSection">
+        <div class="colors boxes boxes2">
+          <h2>Colors</h2>
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              id="red"
+              value="red"
+              class="allCategories colorAll"
+            />
+            <label for="red">Red</label>
+          </div>
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              class="allCategories colorAll"
+              id="blue"
+              value="blue"
+            />
+            <label for="blue">Blue</label>
+          </div>
+
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              class="allCategories colorAll"
+              id="green"
+              value="green"
+            />
+            <label for="green">Green</label>
+          </div>
+
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              class="allCategories colorAll"
+              id="black"
+              value="black"
+            />
+            <label for="black">Black</label>
+          </div>
+
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              class="allCategories colorAll"
+              id="grey"
+              value="grey"
+            />
+            <label for="grey">grey</label>
+          </div>
+        </div>
+
+        <div class="sizes boxes">
+          <h2>Sizes</h2>
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              class="allCategories sizesAll"
+              id="S"
+              value="S"
+            />
+            <label for="S">S</label>
+          </div>
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              class="allCategories sizesAll"
+              id="M"
+              value="M"
+            />
+            <label for="M">M</label>
+          </div>
+          <div class="allSortMethod size">
+            <input
+              type="checkbox"
+              class="allCategories sizesAll"
+              id="L"
+              value="L"
+            />
+            <label for="L">L</label>
+          </div>
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              class="allCategories sizesAll"
+              id="XL"
+              value="XL"
+            />
+            <label for="XL">XL</label>
+          </div>
+        </div>
+
+        <div class="rating boxes">
+          <h2>Rating</h2>
+          <input type="range" min="1" max="5" value="0" id="ratingrange" />
+          <div class="rating0-5">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+          </div>
+        </div>
+
+        <div class="priceRange boxes boxes2">
+          <h2>Price Range</h2>
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              class="allCategories filterprice"
+              id="0-25"
+              value="0-25"
+            />
+
+            <label for="0-25">$0 to $25</label>
+          </div>
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              class="allCategories filterprice"
+              id="25-50"
+              value="25-50"
+            />
+            <label for="25-50">$25 to $50</label>
+          </div>
+
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              class="allCategories filterprice"
+              id="50-100"
+              value="50-100"
+            />
+            <label for="50-100">$50 to $100</label>
+          </div>
+          <div class="allSortMethod">
+            <input
+              type="checkbox"
+              class="allCategories filterprice"
+              id="100"
+              value="100-10000"
+            />
+            <label for="100-10000">$100 onwards</label>
+          </div>
+        </div>
+
+        <div class="applyFilter boxes">
+          <button id="filter-apply-btn">Apply Filter</button>
+        </div>
+      </div>
+      <main>
+        <div class="rightSection">
+          <input type="search" id="search" placeholder="Search by title here" />
+          <span class="material-icons" id="searchicon">
+            search
+          </span>
+          <div class="products-categories">
+            <button class="All category allBtn" value="all">All</button>
+            <button class="mens category" value="men's clothing">
+              Mens
+            </button>
+            <button class="womens category" value="women's clothing">
+              Womens
+            </button>
+            <button class="jewellery category" value="jewelery">
+              Jewellery
+            </button>
+            <button class="electronics category" value="electronics">
+              Electronics
+            </button>
+          </div>
+          <div class="loader">
+            <div id="loaderHeading">
+              loading, Please wait...
+            </div>
+            <div class="circleloader"></div>
+          </div>
+          <div class="Products"></div>
+        </div>
+      </main>
+    </div>
+    <script src="homepage.js"></script>
+  </body>
+</html>

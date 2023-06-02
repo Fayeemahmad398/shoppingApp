@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+    <link rel="stylesheet" href="cart.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styleForAllFiles.css" />
+  </head>
+  <body>
+    <div class="color3" style="background-color: red;"></div>
+    <div class="container">
+      <nav id="navbar">
+        <div class="logo">
+          <p><a href="../index.html">MeShop</a></p>
+        </div>
+        <span class="material-icons hamberger">
+          menu
+        </span>
+        <ul class="NavbarUl">
+          <li><a href="../HomePage/homepage.html">Home</a></li>
+          <li>
+            <a href="" id="loginpage">Login</a>
+          </li>
+          <li id="signup"><a href="">Signup</a></li>
+          <li><a href="">MyCart</a></li>
+          <li><a href="http:../profile/profile.html">Profile</a></li>
+        </ul>
+      </nav>
+
+      <h1 id="msgNocart"></h1>
+      <hr style="height: 2px; width: 100%;" />
+      <div class="img">
+        <img src="cartlogo.png" alt="" id="cartImg" />
+      </div>
+      <main>
+        <div class="Products"></div>
+        <div class="checkoutlist">
+          <h2>Checkout List</h2>
+          <hr />
+          <div class="itemBox"></div>
+          <hr />
+          <div class="total">
+            <!-- <strong>Total</strong>
+            <strong>23432$</strong> -->
+          </div>
+          <hr />
+          <button id="checkListBtn">Click to Pay</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="cart.js"></script>
+  </body>
+</html>

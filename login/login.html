@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loginpage</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styleForAllFiles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navbar">
+        <div class="logo">
+          <p><a href="index.html">MeShop</a></p>
+        </div>
+        <span class="material-icons hamberger">
+          menu
+        </span>
+        <ul class="NavbarUl">
+          <li><a href="../index.html">Home</a></li>
+          <li>
+            <a href="./login.html" onclick="loginPage(this)" id="loginpage"
+              >Login</a
+            >
+          </li>
+          <li><a href="../signupFolder/signup.html">Signup</a></li>
+          <li id="mycart"><a>MyCart</a></li>
+          <li id="profilebtn"><a>Profile</a></li>
+        </ul>
+      </nav>
+
+      <form action="" id="form">
+        <h1>Login</h1>
+        <input
+          type="email"
+          id="email"
+          required
+          placeholder="123abc@gmail.com"
+        />
+        <input type="password" id="password" required placeholder="password" />
+        <button id="login">
+          <a href="./login.html" id="loginBtn"> Login</a>
+        </button>
+      </form>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
+</html>
