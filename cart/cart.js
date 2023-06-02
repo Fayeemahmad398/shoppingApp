@@ -3,7 +3,6 @@ let totalAmount = 0;
 let checkList = document.querySelector(".itemBox");
 let total = document.querySelector(".total");
 
-// showing  data which inside in cart
 function showDataOnList() {
   if (
     !localStorage.getItem("arrOfCarts") ||
@@ -86,22 +85,22 @@ function showDataOnList() {
     <strong>${totalAmount}$</strong>`;
   }
 }
-showDataOnList();
-
-// calculating the cost of products
 function calCulateCost() {
   let sum = 0;
-  let cartProduct = JSON.parse(localStorage.getItem("arrOfCarts"));
+  let cartProduct = JSON.parse(localStorage.getItem("arrOfCarts") || []);
   for (let i = 0; i < cartProduct.length; i++) {
     sum += cartProduct[i].price;
   }
+  console.log(sum);
   return sum.toFixed(2);
 }
+showDataOnList();
 
-// removing products from the local storage
 function removeItem(element) {
+  // console.log(element.parentElement.id);
   let cart = JSON.parse(localStorage.getItem("arrOfCarts"));
 
+  // console.log(cart);
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].id == element.parentElement.id) {
       cart.splice(i, 1);
@@ -109,6 +108,8 @@ function removeItem(element) {
       break;
     }
   }
+  // console.log(cart);
+
   localStorage.setItem("arrOfCarts", JSON.stringify(cart));
   noOfItems = 0;
 
@@ -123,7 +124,6 @@ document.getElementById("loginpage").onclick = function () {
   alert("You have already logged in !");
 };
 
-// checking the list of products to pay the bill of products
 document.getElementById("checkListBtn").addEventListener("click", () => {
   document.getElementById("checkListBtn").classList.add("shakingeffect");
   setTimeout(() => {
