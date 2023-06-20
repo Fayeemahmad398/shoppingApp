@@ -171,7 +171,6 @@ main {
   justify-items: center;
 }
 #loaderHeading {
-  position: absolute;
   font-size: large;
 }
 .card {
@@ -236,8 +235,8 @@ img {
 .circleloader {
   height: 40px;
   width: 40px;
-  /* margin-top: 75px; */
-  margin: auto;
+
+  /* margin: auto; */
   border-top: 6px solid rgb(154, 152, 152);
   border-bottom: 6px solid rgb(158, 156, 156);
   border-radius: 60px;
@@ -257,10 +256,13 @@ img {
   width: 80%;
   height: 60vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .allBtn {
   height: 30px;
