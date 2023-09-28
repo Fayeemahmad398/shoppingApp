@@ -1,3 +1,5 @@
+import { hanldeHamberger } from "../handleHamber.js";
+
 let noOfItems = 0;
 let totalAmount = 0;
 let checkList = document.querySelector(".itemBox");
@@ -138,7 +140,8 @@ document.getElementById("checkListBtn").addEventListener("click", () => {
   }
 });
 document.querySelector(".hamberger").addEventListener("click", function () {
-  document.querySelector(".NavbarUl").classList.toggle("boxicon");
+  // document.querySelector(".NavbarUl").classList.toggle("boxicon");
+  hanldeHamberger();
 });
 
 document.getElementById("loginpage").onclick = function () {
