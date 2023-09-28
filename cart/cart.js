@@ -1,5 +1,3 @@
-import { hanldeHamberger } from "../handleHamber.js";
-
 let noOfItems = 0;
 let totalAmount = 0;
 let checkList = document.querySelector(".itemBox");
@@ -139,10 +137,15 @@ document.getElementById("checkListBtn").addEventListener("click", () => {
     window.location.href = "../razorPay/razorpay.html";
   }
 });
-document.querySelector(".hamberger").addEventListener("click", function () {
-  // document.querySelector(".NavbarUl").classList.toggle("boxicon");
-  hanldeHamberger();
-});
+
+document.querySelector(".hamberger").onclick = function () {
+  if (document.querySelector(".hamberger").innerText == "menu") {
+    document.querySelector(".hamberger").innerText = "close";
+  } else {
+    document.querySelector(".hamberger").innerText = "menu";
+  }
+  document.querySelector(".NavbarUl").classList.toggle("boxicon");
+};
 
 document.getElementById("loginpage").onclick = function () {
   alert("You have already logged in !");
