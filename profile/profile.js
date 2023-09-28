@@ -11,7 +11,9 @@ const change_pass_btn = document.getElementById("change_pass_btn");
 let savedAllUsers = JSON.parse(localStorage.getItem("all_Saved_Users"));
 
 let currUser = JSON.parse(localStorage.getItem("single_user")) || [];
-if (currUser.length != 0) {
+
+// console.log(Object.keys(currUser).length);
+if (Object.keys(currUser).length != 0) {
   firstNameEle.value = currUser.first_name;
   lastNameEle.value = currUser.last_name;
 }

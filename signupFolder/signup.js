@@ -1,4 +1,6 @@
-const signup_btn = document.getElementById("loginBtn");
+import { hanldeHamberger } from "../handleHamber.js";
+
+const signup_btn = document.getElementById("signup");
 var all_Saved_Users = [];
 
 signup_btn.addEventListener("click", HandleSignup);
@@ -49,7 +51,7 @@ function HandleSignup(event) {
     localStorage.setItem("all_Saved_Users", JSON.stringify(all_Saved_Users));
     window.location.href = "../login/login.html";
   } else {
-    alert("Please all information properly");
+    alert("Please fill all information properly");
   }
 }
 
@@ -62,6 +64,6 @@ document.getElementById("profilebtn").onclick = function () {
   alert("Please sign up first!");
 };
 
-document.querySelector(".hamberger").addEventListener("click", function () {
-  document.querySelector(".NavbarUl").classList.toggle("boxicon");
+document.querySelector(".hamberger").addEventListener("click", () => {
+  hanldeHamberger();
 });

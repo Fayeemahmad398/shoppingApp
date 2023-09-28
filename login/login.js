@@ -1,8 +1,8 @@
+import { hanldeHamberger } from "../handleHamber.js";
+
 const loginBtn = document.getElementById("loginBtn");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-let Users = [];
-
 
 loginBtn.addEventListener("click", function (event) {
   event.preventDefault();
@@ -58,14 +58,13 @@ function generateToken() {
   return token;
 }
 
-
-
 document.getElementById("mycart").onclick = function () {
   alert("Please login first!");
 };
 document.getElementById("profilebtn").onclick = function () {
   alert("Please login first!");
 };
+
 document.querySelector(".hamberger").addEventListener("click", function () {
-  document.querySelector(".NavbarUl").classList.toggle("boxicon");
+  hanldeHamberger();
 });

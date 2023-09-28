@@ -182,7 +182,7 @@ button {
 
 @keyframes translate {
   from {
-    transform: translateX(500%);
+    transform: translateX(1000%);
     opacity: 0.1;
   }
   to {

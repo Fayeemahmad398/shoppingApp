@@ -1,3 +1,5 @@
+import { hanldeHamberger } from "../handleHamber.js";
+
 function NoIllegelAccess() {
   if (!localStorage.getItem("single_user")) {
     window.location.href = `../login/login.html`;
@@ -83,12 +85,15 @@ function generateSize() {
 }
 
 // showing the products on UI
+
 function ShowBrands(brandsInfoArr) {
   products.innerHTML = "";
-  document.querySelector(".Products").style.display = "grid";
+
+  // document.querySelector(".Products").style.display = "grid";
+
   if (brandsInfoArr.length == 0) {
     products.innerHTML = ` <h1 id="NoData">Oops! No data found on these filters !</h1>`;
-    document.querySelector(".Products").style.display = "block";
+    // document.querySelector(".Products").style.display = "block";
   }
 
   brandsInfoArr.forEach((card) => {
@@ -137,7 +142,9 @@ function ShowBrands(brandsInfoArr) {
 document.getElementById("search").focus = function () {
   document.getElementById("search").classList.add("searchagain");
 };
+
 const AllCards = document.getElementsByClassName("card");
+
 const search = document.getElementById("search");
 document.getElementById("search").addEventListener("keyup", () => {
   let inputval = search.value.trim().toLowerCase();
@@ -195,6 +202,9 @@ let filteredMapedObject = {};
 let applyBtn = document.getElementById("filter-apply-btn");
 
 applyBtn.addEventListener("click", (event) => {
+  document.querySelector(".leftSection").classList.toggle("leftSection2");
+  document.querySelector(".expandmore").textContent = "expand_less";
+
   //applying the filter,on basis conditions, selected as per need
   let selectedColors = allSelcetedColors();
   let selectedSizes = allSelcetedSizes();
@@ -340,23 +350,29 @@ function holdingAllcartBtns(allButtons) {
         localStorage.setItem("arrOfCarts", JSON.stringify(arrOfCarts));
       } else {
         arrOfCarts = JSON.parse(localStorage.getItem("arrOfCarts"));
-        // if (!arrOfCarts.includes(obj)) {
-        arrOfCarts.push(obj);
-        // }
+        if (!arrOfCarts.includes(obj)) {
+          arrOfCarts.push(obj);
+        }
         localStorage.setItem("arrOfCarts", JSON.stringify(arrOfCarts));
       }
     };
   }
 }
+
+// -----------------------------------------------------------------
+
 document.getElementById("loginpage").onclick = function () {
   alert("You have already logged in");
 };
+
 document.getElementById("signup").onclick = function () {
   alert("You have already signed up");
 };
+
 document.querySelector(".hamberger").addEventListener("click", function () {
-  document.querySelector(".NavbarUl").classList.toggle("boxicon");
+  hanldeHamberger();
 });
+
 document.getElementById("clickToSort").onclick = function () {
   document.querySelector(".leftSection").classList.toggle("leftSection2");
   if (document.querySelector(".expandmore").textContent === "expand_more") {

@@ -2,7 +2,6 @@
   display: none !important;
 }
 
-
 @media (max-width: 740px) {
   .NavbarUl {
     display: flex;

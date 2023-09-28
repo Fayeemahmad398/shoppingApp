@@ -120,12 +120,9 @@ document.getElementById("signup").onclick = function () {
   alert("You have already signed up");
 };
 
-document.getElementById("loginpage").onclick = function () {
-  alert("You have already logged in !");
-};
-
 document.getElementById("checkListBtn").addEventListener("click", () => {
   document.getElementById("checkListBtn").classList.add("shakingeffect");
+
   setTimeout(() => {
     document.getElementById("checkListBtn").classList.remove("shakingeffect");
   }, 3000);
@@ -143,3 +140,7 @@ document.getElementById("checkListBtn").addEventListener("click", () => {
 document.querySelector(".hamberger").addEventListener("click", function () {
   document.querySelector(".NavbarUl").classList.toggle("boxicon");
 });
+
+document.getElementById("loginpage").onclick = function () {
+  alert("You have already logged in !");
+};
